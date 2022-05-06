@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 import "./index.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="index">
       <h1>Hello World</h1>
+      <NewExpense></NewExpense>
       <Expenses item={expenses}></Expenses>
       {/* <ExpenseItem
         title={expenses[0].title}
