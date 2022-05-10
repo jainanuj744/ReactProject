@@ -20,10 +20,16 @@ function App() {
       date: new Date(2021, 7, 16),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    console.log('In App.js');
+    console.log(expense);
+  }
+
   return (
     <div className="index">
-      <h1>Hello World</h1>
-      <NewExpense></NewExpense>
+      {/* <h1>Hello World</h1> */}
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses item={expenses}></Expenses>
       {/* <ExpenseItem
         title={expenses[0].title}
