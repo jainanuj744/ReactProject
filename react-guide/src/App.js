@@ -5,9 +5,14 @@ import "./index.css";
 function App() {
   const expenses = [
     {
+      title: "Health Insurance",
+      amount: 500,
+      date: new Date(2019, 4, 22),
+    },
+    {
       title: "Car Insurance",
       amount: 600,
-      date: new Date(2021, 5, 30),
+      date: new Date(2020, 5, 30),
     },
     {
       title: "New TV",
@@ -17,7 +22,7 @@ function App() {
     {
       title: "New Bike",
       amount: 800,
-      date: new Date(2021, 7, 16),
+      date: new Date(2022, 7, 16),
     },
   ];
 
