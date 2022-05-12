@@ -1,35 +1,49 @@
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import "./index.css";
 
-function App() {
-  const expenses = [
-    {
-      title: "Health Insurance",
-      amount: 500,
-      date: new Date(2019, 4, 22),
-    },
-    {
-      title: "Car Insurance",
-      amount: 600,
-      date: new Date(2020, 5, 30),
-    },
-    {
-      title: "New TV",
-      amount: 700,
-      date: new Date(2021, 6, 25),
-    },
-    {
-      title: "New Bike",
-      amount: 800,
-      date: new Date(2022, 7, 16),
-    },
-  ];
+const DUMMY_EXPENSES = [
+  {
+    title: "Health Insurance",
+    amount: 500,
+    date: new Date(2019, 4, 22),
+  },
+  {
+    title: "Car Insurance",
+    amount: 600,
+    date: new Date(2020, 5, 30),
+  },
+  {
+    title: "New TV",
+    amount: 700,
+    date: new Date(2021, 6, 25),
+  },
+  {
+    title: "New Bike",
+    amount: 800,
+    date: new Date(2022, 7, 16),
+  },
+];
+
+const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    console.log('In App.js');
-    console.log(expense);
-  }
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
+
+  // const App = () => {
+  // const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  // const addExpenseHandler = (expense) => {
+  // console.log("In App.js");
+  // console.log(expense);
+  // setExpenses((prevExpenses) => {
+  // return [expense, ...prevExpenses];
+  // });
+  // };
 
   return (
     <div className="index">
@@ -53,6 +67,6 @@ function App() {
       ></ExpenseItem> */}
     </div>
   );
-}
+};
 
 export default App;

@@ -1,9 +1,11 @@
+import React from 'react';
+
 import './ExpenseDate.css';
 
 function ExpenseDate(props) {
-    const expenseMonth = props.date.toLocaleString("en-US", { month: "long" });
-    const expenseDay = props.date.toLocaleString("en-US", { day: "2-digit" });
-    const expenseYear = props.date.getFullYear();
+    const expenseMonth = props.date?.toLocaleString("en-US" , { month: "long" }) || '';
+    const expenseDay = props.date?.toLocaleString("en-US", { day: "2-digit" }) || '';
+    const expenseYear = props.date?.getFullYear() || '';
   
     return (
       <div className='expense-date'>
