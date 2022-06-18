@@ -1,0 +1,12 @@
+Questons---
+
+1. What is BOM?explain hierarchy
+2. What is Hosting?explain **
+3. Difference between null and undefined
+4. Evaluate typeof null == undefined/null === undefined
+5. What is deep copy and shallow copy.
+6. Difference between regular function vs arrow function?
+7. What is currying?Explain with example
+8. Difference between Async-await/promises
+9. What is event delegation?
+10.ES6 Features...explain some of them.
